@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
+</head>
+
+<body>
+    <main>
+        <div class="section">
+            <h3 class="txt">Điện thoại OPPO A92</h3>
+           <div class="rangting">
+               <input type="radio" name="rangting" id="star5">
+               <label for="star5"></label>
+               
+               <input type="radio" name="rangting" id="star4">
+               <label for="star4"></label>
+               
+               <input type="radio" name="rangting" id="star3">
+               <label for="star3"></label>
+
+               <input type="radio" name="rangting" id="star2">
+               <label for="star2"></label>
+
+               <input type="radio" name="rangting" id="star1">
+               <label for="star1"></label>
+
+               <span class="result"></span>
+           </div>
+        </div>
+    </main>
+    <hr class="hr">
+    <section class="detail">
+        <div class="detail-img">
+            <img src="https://cdn.tgdd.vn/Products/Images/42/213591/oppo-reno3-trang-400x460-400x460.png" alt="">
+            <div class="detail-carousel">
+                <h3 class="txt-img">Xem hình ảnh thực tế của ảnh</h3>
+                <div class="owl-carousel-wrap">
+                    <div class="owl-carousel owl-theme">
+                      <div class="item">
+                        <img class="" src="//cdn.tgdd.vn/Products/Images/42/220654/oppo-a92-black-200x200-180x125.png"></div>
+                        <div class="item">
+                            <img class="" src="//cdn.tgdd.vn/Products/Images/42/220654/oppo-a92-black-200x200-180x125.png"></div>
+                            <div class="item">
+                               <img class="" src="//cdn.tgdd.vn/Products/Images/42/220654/oppo-a92-black-200x200-180x125.png"></div>
+                     
+                    </div>
+                    <div class="popup"></div>
+                  </div>
+            </div>
+        </div>
+        <div class="detail-info">
+            <h3>8.999.000VNĐ</h3>
+            <label class="detail-label">Trả góp 0%</label>
+            <img src="https://cdn.tgdd.vn/2020/07/banner/380-100-380x100-1.png" alt="">
+            <div class="detail-box">
+                <h3>Khuyến mãi</h3>
+                <p>Tặng 2 suất mua Đồng hồ thời trang giảm 40% (không áp dụng thêm khuyến mãi khác</p>
+            </div>
+            <div class="btn-detail">
+                <a href="#">Mua ngay</a>
+            </div>
+        </div>
+        <div class="detail-service">
+            <p class="detail-txt">Bạn có tại nơi mua hàng không?</p>
+            <div class="detail-service__box">
+                <p>Bộ sản phẩm gồm: Hộp, Sạc, Tai nghe, sách hướng dẫn.</p>
+                <p>Bảo hành chính hãng 12 tháng!</p>
+            </div>
+        </div>
+    </section>
+    <section class="comment">
+        <h3>Phần bình luận:</h3>
+        <div>
+            <textarea  class="comemnt-message"  cols="100" rows="6" placeholder="Nhập bình luận..."></textarea>
+           
+        </div>
+        <button class="btn-comment">Gửi bình luận</button>
+        <div class="hr1"></div>
+        <h3 class="txt-comment">Bình luận</h3>
+        <ul class="comment-list">
+            <li class="comment-list1">
+                <h4>Nguyễn Na</h4>
+                <p>Sản phẩm tốt</p>
+            </li>
+            <li class="comment-list1">
+                <h4>Nguyễn Na</h4>
+                <p>Sản phẩm tốt</p>
+            </li>
+            <li class="comment-list1">
+                <h4>Nguyễn Na</h4>
+                <p>Sản phẩm tốt</p>
+            </li>
+        </ul>
+    </section>
+    
+</body>
+
+
+
+<script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 5
+          },
+          1000: {
+            items: 5
+          }
+        }
+      });
+      
+      var topItem = 0,
+        leftItem = 0,
+        popupHeight = 500;
+      
+      $(".owl-carousel .item").on("click", function(e) {
+        var $this = $(this),
+          $parent = $this.parents(".owl-carousel-wrap"),
+          content = $this.html(),
+          $popup = $parent.find(".popup");
+      
+        topItem = $this.offset().top - $parent.offset().top + $this.height() / 2;
+        leftItem = $this.offset().left - $parent.offset().left + $this.width() / 2;
+      
+        $popup.css({
+          top: topItem,
+          left: leftItem,
+          width: 0,
+          height: 0
+        });
+      
+        $popup.html(content).stop().animate(
+          {
+            top: -((popupHeight - $this.parent().outerHeight()) / 2),
+            left: 0,
+            width: "100%",
+            height: popupHeight,
+            opacity: 1
+          },
+          400
+        );
+      });
+      
+      $(".popup").on("click", function(e) {
+        $(this).stop().animate(
+          {
+            width: 0,
+            height: 0,
+            top: topItem,
+            left: leftItem,
+            opacity: 0
+          },
+          400
+        );
+      });
+      
+</script>
+</html>

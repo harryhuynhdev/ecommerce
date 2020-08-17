@@ -1,0 +1,313 @@
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+main{
+  width: 1180px;
+  margin: 0 auto;
+
+}
+.section{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.txt{
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.hr{
+  width: 1180px;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+.rangting{
+  margin: 10px;
+  
+  position: relative;
+}
+.rangting input{
+  display: none;
+}
+.rangting label{
+  float: right;
+  color: #ddd;
+ 
+}
+.rangting label::before{
+  font-family: FontAwesome;
+  content: "\f005";
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+.rangting > input:checked ~ label{
+  color: #ffd700;
+}
+.rangting > input:checked ~ label:hover,
+.rangting:not(:checked) > label:hover,
+.rangting:not(:checked) > label:hover ~ label{
+
+  color: #ffed85;
+}
+.rangting .result{
+  position: absolute;
+  left: 220px;
+  width: 100%;
+  top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  
+}
+.rangting #star1:checked ~ .result::before{
+  content: "Kém";
+  
+}
+.rangting #star2:checked ~  .result::before{
+  content: "Không tốt";
+  
+}
+.rangting #star3:checked ~  .result::before{
+  content: "Trung bình";
+  
+}
+.rangting #star4:checked ~  .result::before{
+  content: "Khá tốt";
+  
+}
+.rangting #star5:checked ~  .result::before{
+  content: "Tốt";
+  
+}
+.detail{
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+}
+.detail-img{
+  width: 40%;
+}
+.owl-carousel-wrap {
+  /* width: 100%;
+  max-width: 960px;
+  margin: 200px auto; */
+  position: relative;
+  margin-top: 20px;
+}
+
+.owl-carousel .item {
+  height: 3rem;
+  /* background: #4DC7A0; */
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.popup {
+  position: absolute;  
+  width: 0;
+  height: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 10;
+  opacity: 0;
+}
+.popup img{
+  width: 60%;
+  height: 60%;
+  text-align: center;
+  margin-left: 80px;
+  margin-top: 80px;
+}
+.txt-img{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+.detail-info{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+position: relative;
+}
+.detail-box{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.btn-detail{
+  padding: 5px;
+  background-color: #e6872d;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+.btn-detail a{
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  text-align: center;
+  
+}
+.detail-label{
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: #fed700;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  margin-top: 18px;
+  color: white;
+}
+.detail-service{
+  width: 22%;
+  margin-left: 3%;
+  
+}
+.detail-txt{
+  color: red;
+  font-size: 1rem;
+ 
+}
+.detail-service__box{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+  
+}
+.detail-service__box p{
+  margin-left: 5px;
+}
+.comment{
+  
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.comment h3{
+  font-size: 1rem;
+}
+.comemnt-message{
+  border-radius: 5px;
+ 
+  /* border: 0; */
+  outline: none;
+  padding: 10px;
+}
+.btn-comment{
+  
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+}
+/* .hr{
+  
+  background-color: #ddd;
+  width: 500px;
+  height: 1px;
+  margin-bottom: 100px;
+} */
+.hr1{
+  width: 740px;
+  background-color: #ddd;
+  height: 1px;
+  
+  margin-top: 20px;
+}
+.comment-list{
+  width: 720px;
+  padding-inline-start: 0;
+  margin-bottom: 50px;
+}
+.comment-list1{
+  margin: 10px;
+  list-style: none;
+
+ 
+}
+.comment-list1 h4{
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.comment-list1 p{
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.pagination {
+  width: 400px;
+  margin-left: 50px;
+}
+.pagination a {
+  display: block;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+ 
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+ 
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+.pagination a.disabled {
+  cursor: not-allowed !important;
+}
+.login{
+  width: 1180px;
+  height: 80vh;
+  margin: 0 auto;
+}
+.main-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  
+}
+.main-login form{
+  width: 300px;
+  height: 350px;
+  background-color: #e6872d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+.main-login form input{
+  margin-bottom: 10px;
+  width: 250px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #ddd;
+  
+}
+.btn-login{
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 0;
+}
